@@ -100,10 +100,10 @@ cd preprocess
 python graph_dataset.py
 ```
 This will:
-- Process DOT files
-- Apply graph pruning strategies
+- Parse DOT files
+- Apply node pruning strategies
 - Generate control and data hyperedges
-- Get HCPG
+- Get HCPGs
 - Save the embedding as `pruned_cpg_dataset.pkl`
 
 ### Step 3: Train Models
@@ -155,7 +155,7 @@ The framework implements sophisticated graph preprocessing strategies:
 - Eliminates print statement nodes
 - Reconnects parent-child relationships
 
-### 2. AST Leaf Node Processing
+### 2. Leaf Node Processing
 - Removes LITERAL and IDENTIFIER leaf nodes
 - Merges nodes with identical data types (LOCAL, PARAM)
 - Consolidates duplicate TYPE_REF and METHOD_RETURN nodes
@@ -165,9 +165,8 @@ The framework implements sophisticated graph preprocessing strategies:
 ### 4. Data Hyperedge Generation
 
 ### 5. Feature Engineering
-- Type-aware embeddings for semantic code representation
-- Node type embeddings
-- Edge type embeddings
+- Flow-sensitive hypergraph learning
+- Type-aware embeddings
 - Multi-modal feature fusion
 
 ## 📋 Output and Logging
