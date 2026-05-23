@@ -16,12 +16,7 @@ args = parser.parse_args()
 # 路径配置（这些是“根目录”）
 dataset_file = Path(f"../data/{args.dataset}")
 source_root = Path("source")
-if args.dataset == 'FFmpeg-Qemu.json':
-    dot_output_dir = Path("dots-cpg/ffmpeg-qemu")
-elif args.dataset == 'PrimeVul.json':
-    dot_output_dir = Path("dots-cpg/primevul")
-elif args.dataset == 'Chrome-Debian.json':
-    dot_output_dir = Path("dots-cpg/chrome-debian")
+dot_output_dir = Path("dots-cpg")
 joern_workspace = Path("workspace")
 
 # 创建目录
